@@ -1,0 +1,138 @@
+*{  margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans",sans-serif;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+header h1{
+    padding: 1.5% 1.5%;
+    color: #535863;
+    font-family: "Italiana" , "Quicksand" , sans-serif;
+    font-size: 2rem;
+     text-decoration:underline;
+ }
+ body{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+ header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 30px;
+ }
+header ul a{
+     text-decoration: none;
+     font-size:x-large;
+     padding: 1.5% 1.5%;
+     padding-inline: 10px;
+     color: rgb(11, 94, 146);
+     transition:0.2s;
+  }
+header ul a:hover{
+     transform: rotateX(45deg);
+     color:rgb(43, 177, 166);
+     background-color: rgb(71, 69, 160);
+     border-radius: 50px;
+ }
+ .par{
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+    padding: 2% 0%;
+    height: 60vh;
+}
+.ch{
+    padding: 5%;
+    width: 30vw;
+    font-size: 1.3em;
+    background-color: rgba(15, 67, 145, 0.15);
+    box-shadow: 0px 0px 30px 0px black;
+}
+.par img{
+    height: 50vh;
+    filter: brightness(80%);
+    animation: ani-vany 3s ease-in-out infinite alternate;
+}
+@keyframes ani-vany{
+    from{
+        transform: translateY(-10px);
+        }
+    to{
+        transform: translateY(50px);
+    }
+}
+.skill{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.capt,.imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill img{
+    height: 20vh;
+}
+.imgs img{
+    margin-inline: 5%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 white;
+    transition: 0.3s;
+}
+.imgs img:hover{
+    box-shadow: 0 0 30px 0 rgb(49, 46, 214);
+    height: 22vh;
+}
+.proj{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-top: 2%;
+}
+.proj p{
+    font-size: 1.3rem;
+    color: rgb(230, 222, 222);
+}
+.proj p a{
+    text-decoration: none;
+    color: blue;
+}
+.proj p a:hover{
+    color: rgb(26, 108, 175);
+    text-decoration:underline;
+}
+.cap2,.achv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.achieve{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-top: 2%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.achieve ul li{
+    font-size: 1.3rem;
+    color:rgb(230, 222, 222);
+    list-style-type: none;
+}
+.achieve ul li a{
+    text-decoration: none;
+    color:blue;
+}
+.achieve ul li a:hover{
+    color: rgb(26, 108, 175);
+    text-decoration:underline;
+}
