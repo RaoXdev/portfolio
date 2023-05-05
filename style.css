@@ -70,7 +70,7 @@ header ul a:hover{
     justify-content: space-around;
     align-items: center;
     margin-top: 2%;
-    height: 50vh;
+    height: 80vh;
     background-color: rgba(0, 0, 0, 0.1);
 }
 .capt,.imgs{
@@ -95,11 +95,11 @@ header ul a:hover{
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 80vh;
     margin-top: 2%;
 }
 .proj p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(230, 222, 222);
 }
 .proj p a{
@@ -119,12 +119,12 @@ header ul a:hover{
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 80vh;
     margin-top: 2%;
     background-color: rgba(0, 0, 0, 0.1);
 }
 .achieve ul li{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color:rgb(230, 222, 222);
     list-style-type: none;
 }
