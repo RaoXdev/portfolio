@@ -1,138 +1,308 @@
-*{  margin: 0;
+*{
+    margin: 0;
     padding: 0;
-    font-family: "Josefin Sans",sans-serif;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: white;
+    scroll-behavior:smooth;
 }
-::-webkit-scrollbar{
-    width: 0px;
+:root{
+    --lb:rgb(179, 229, 233);
+    --db:rgb(30, 90, 131);
+    --bgc:rgba(8,19,45,255);
+}
+#preloader{
+    background: rgba(34,31,55,255) url("https://cdn.dribbble.com/users/278089/screenshots/2906113/loader-untz.gif") no-repeat center center;
+    background-size: 30%;
+    height:100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+body{
+    position: relative;
+    background-color: rgba(8,19,45,255);
+    overflow-x: hidden;
+}
+#your-element-selector{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+#ico{
+    display: none;
 }
 header h1{
-    padding: 1.5% 1.5%;
-    color: #535863;
-    font-family: "Italiana" , "Quicksand" , sans-serif;
-    font-size: 2rem;
-     text-decoration:underline;
- }
- body{
-    background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    position: relative;
+    font-family: Sofia;
+    color: rgb(179, 229, 233);
 }
- header{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 30px;
- }
-header ul a{
-     text-decoration: none;
-     font-size:x-large;
-     padding: 1.5% 1.5%;
-     padding-inline: 10px;
-     color: rgb(11, 94, 146);
-     transition:0.2s;
-  }
-header ul a:hover{
-     transform: rotateX(45deg);
-     color:rgb(43, 177, 166);
-     background-color: rgb(71, 69, 160);
-     border-radius: 50px;
- }
- .par{
-     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2%;
-    padding: 2% 0%;
-    height: 60vh;
+header h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8,19,45,255);
+    animation:h1_ani 1s ease forwards 0.8s;
 }
-.ch{
-    padding: 5%;
-    width: 30vw;
-    font-size: 1.3em;
-    background-color: rgba(15, 67, 145, 0.15);
-    box-shadow: 0px 0px 30px 0px black;
+@keyframes h1_ani{
+    100%{   width: 0;}
 }
-.par img{
-    height: 50vh;
-    filter: brightness(80%);
-    animation: ani-vany 3s ease-in-out infinite alternate;
+header{
+    padding:1% 3%;
 }
-@keyframes ani-vany{
-    from{
-        transform: translateY(-10px);
-        }
-    to{
-        transform: translateY(50px);
-    }
-}
-.skill{
-    display: grid;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2%;
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.capt,.imgs{
+header,ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.skill img{
-    height: 20vh;
-}
-.imgs img{
-    margin-inline: 5%;
-    border-radius: 50%;
-    box-shadow: 0 0 20px 0 white;
-    transition: 0.3s;
-}
-.imgs img:hover{
-    box-shadow: 0 0 30px 0 rgb(49, 46, 214);
-    height: 22vh;
-}
-.proj{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin-top: 2%;
-}
-.proj p{
-    font-size: 1.5rem;
-    color: rgb(230, 222, 222);
-}
-.proj p a{
-    text-decoration: none;
-    color: blue;
-}
-.proj p a:hover{
-    color: rgb(26, 108, 175);
-    text-decoration:underline;
-}
-.cap2,.achv2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.achieve{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin-top: 2%;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.achieve ul li{
-    font-size: 1.5rem;
-    color:rgb(230, 222, 222);
+header ul{
     list-style-type: none;
 }
-.achieve ul li a{
-    text-decoration: none;
-    color:blue;
+header ul li a{ text-decoration: none;}
+header ul li{
+    position: relative;
+    margin-inline: 30px;
+    padding: 10px;
+    cursor: pointer;
 }
-.achieve ul li a:hover{
-    color: rgb(26, 108, 175);
-    text-decoration:underline;
+header ul li::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background-color: white;
+    transition: 0.3s;
+}
+header ul li:hover::before{
+    width: 100%;
+}
+header #ico,header #ico2{
+    display:none;
+}
+@media only screen and (max-width:1084px)
+{
+    header ul{
+        position: fixed;
+        display: block;
+        width: 35%;
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        background-color: rgba(78, 85, 97, 0.6);
+        transition:all 0.5s;
+    }
+    header ul.active{
+        right: 0;
+    }
+    header #ico{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+.phrase{
+    padding: 0 9%;
+    height: 90vh;
+}
+.phrase h3{
+    display: inline;
+    font-size: 2.5rem;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 0.7px rgb(57, 138, 138);
+    background-image: linear-gradient(rgb(20, 146, 230),rgb(20, 146, 230));
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: bgtext 6s linear infinite;
+}
+@media only screen and (min-width:482px)
+{
+    .phrase h3::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-right: 2px solid rgb(255, 255, 255);
+        animation: curtext 6s linear infinite;
+    }
+    @keyframes curtext{
+        0%,10%,100%{    width: 0;}
+        65%,78%,85%{    width: 100%;opacity: 1;}
+        75%,81%{    opacity: 0;}
+    }
+}
+@keyframes bgtext{
+    0%,10%,100%{
+        background-position: -24rem 0;
+    }
+    65%,85%{
+        background-position: 0 0;
+    }
+}
+.phrase h1{
+    font-size: 1.8rem;
+    position: relative;
+    margin-top: 27vh;
+}
+.phrase h1::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+.phrase h1:hover::before{
+    width: 70%;
+}
+.phrase p,.phrase h3{
+    margin: 15px 0;
+}
+.phrase .logos{
+    display: inline;
+    margin-inline-start:10px ;
+    font-size: 1.8rem;
+    width: 60%;
+    padding: 0 1.5%;
+    border-radius: 20px;
+    background-color: rgba(20, 146, 230,0.4);
+}
+.phrase .logos a{
+    position: relative;
+    padding: 10px;
+    z-index: 1;
+}
+.phrase .logos a::before,.edu h2::before,.skill h2::before,.proj h2::before,.cont h2::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background-color: white;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.phrase .logos a:hover::before,.edu h2:hover::before,.skill h2:hover::before,.proj h2:hover::before,.cont h2:hover::before{
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 0.6em;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(161, 158, 158);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .edu,.skill,.proj,.cont{
+    display: grid;
+    align-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+}
+.edu h2,.skill h2,.proj h2,.cont h2{
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--lb);
+  }
+  .edu h3{
+    font-size: 1.5rem;
+    color: var(--db);
+  }
+  .edu .block{
+    text-align: center;
+    width: 100%;
+  }
+  .edu .block .high,.edu .block .inter,.edu .block .college{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 2%;
+    padding: 3%;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px var(--lb);
+  }
+  .high::before,.inter::before,.college::before,.react::before,.css::before,.html::before,.js::before,.java::before,.py::before,.snake::before,.eclp::before,.trail::before,.prtcl::before,.call::before,.mail::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+.high:hover::before,.inter:hover::before,.college:hover::before,.react:hover::before,.html:hover::before,.css:hover::before,.js:hover::before,.java:hover::before,.py:hover::before,.snake:hover::before,.eclp:hover::before,.trail:hover::before,.prtcl:hover::before,.call:hover::before,.mail:hover::before{
+    width: 100%;
+}
+.high:hover h3,.inter:hover h3,.college:hover h3{
+    color:var(--lb);
+}
+.skill .langs,.proj .projname{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10%;
+    margin:0 10% 0 10%;
+    text-align:center;
+}
+.skill .react,.skill .html,.skill .css,.skill .js,.skill .java,.skill .py,.snake,.eclp,.trail,.prtcl,.call,.mail{
+    position: relative;
+    z-index: 1;
+    box-shadow: 3px 3px 0px var(--lb);
+    border-radius: 10px;   
+}
+.snake,.eclp,.trail,.prtcl{
+    margin: 10% 0;
+    padding: 5%;
+}
+.skill .langs i,.cont .match i{
+    font-size: 3rem;
+}
+.cont .match{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 30%;
+    margin:0 20%;
+    text-align:center;
+}
+footer{
+    margin-top: 5%;
+    background:rgba(30, 90, 131,0.3);
+}
+footer p{
+    text-align: center;
+    padding: 2%;
+}
+footer a{
+    display: block;
+    padding: 2%;
+    text-align: center;
+    font-size: 2rem;
 }
