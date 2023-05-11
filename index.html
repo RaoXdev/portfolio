@@ -4,58 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Abhishek Kr Rao</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans|Italiana">
-    <link rel="shortcut icon" href="https://mir-s3-cdn-cf.behance.net/project_modules/source/945b0225337909.563440870421b.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://w7.pngwing.com/pngs/106/114/png-transparent-computer-icons-portfolio-investment-drop-up-portfolio-miscellaneous-rectangle-investment-thumbnail.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Poppins">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Abhishek Kr Rao | Portfolio</title>
 </head>
 <body>
-    <header id="home">
-        <h1>AbhisheK Kr Rao</h1>
-        <ul style="list-style: none;">
-            <a href="#home">Home</a>
-            <a href="#skkk">Skills</a>
-            <a href="#projec">Projects</a>
-            <a href="#arch">Achievements</a>
+    <div id="preloader"></div>
+    <div id="your-element-selector"></div>
+    <header>
+        <h1>Abhishek</h1>
+        <div class='bx bx-menu-alt-right' id="ico"></div>
+        <ul id="side">
+            <li><a href="#">Home</a></li>
+            <li><a href="#edu">Education</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#proj">Projects</a></li>
+            <li><a href="#cont">Contact</a></li>
         </ul>
     </header>
-    <div class="par">
-        <div class="ch">
-            <p style="margin-inline-start: 1.5%;color: rgb(204, 225, 236);">Hey There! I'm a Self-Taught Front-End Web Developer & I enjoy building sites either in ReactJS .  This is My Personal Portfolio Site built Myself.</p>
-        </div>
-        <img src="https://codeplateau-website.s3.ap-south-1.amazonaws.com/wp-content/uploads/2020/02/07080632/logo-banner.png" alt="img">
-    </div>
-    <div class="skill" id="skkk">
-        <div class="capt">
-            <h1 style="color: rgb(11, 94, 146);"> S k i l l s </h1>
-        </div>
-        <div class="imgs">
-            <img src="https://arminfoway.com/wp-content/uploads/2020/11/web-4.png" alt="">
-            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" alt="">
-            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" alt="">
-            <img src="https://www.citypng.com/public/uploads/small/11662226392uom4gsi9ddb1c81ipfx2u4imargvwq7uskhdui1pj4f6xufjz0jkfzqzduhjuifts0dzcnykgszw6isfutq2nlwb51ef4gm0dt8d.png" alt="">
-            <img src="https://static.vecteezy.com/system/resources/previews/022/100/686/original/java-logo-transparent-free-png.png" alt="">
-            <img src="https://freepngimg.com/thumb/categories/1402.png" alt="">
+    <div class="phrase" id="#" data-aos="fade-right">
+        <h1>Hi, I'm Abhishek Kr Rao</h1>
+        <h3>FrontEnd Developer</h3>
+        <p>" Passionate Developer striving to create meaningful experiences "</p>
+        <div class="logos">
+            <a href="https://github.com/raoxdev" target="_blank"><i class='bx bxl-github' id="acc_logo"></i></a>
+            <a href="https://codepen.io/RaoXdev" target="_blank"><i class='bx bxl-codepen' id="acc_logo"></i></a>
+            <a href="https://www.linkedin.com/in/abhishek-rao-815588229" target="_blank"><i class='bx bxl-linkedin' id="acc_logo"></i></a>
         </div>
     </div>
-    <div class="proj" id="projec">
-        <div class="cap2">
-            <h1 style="color: rgb(11, 94, 146);"> P r o j e c t s </h1>
+    <div class="edu" id="edu" data-aos="fade-right">
+        <h2>Education <i class='bx bxs-graduation' ></i></h2>
+        <div class="block">
+            <div class="high">
+                <h3>HighSchool <i class='bx bxs-pencil bx-tada' ></i></h3> <br>
+                <p>Children College Azamgarh</p>
+                <p>(ICSE BOARD)</p>
+                <i class='bx bx-calendar bx-tada' ></i> 2016-18
+                <p>Secured 86.40% with A+ Grade</p>
+            </div>
+            <div class="inter">
+                <h3>Intermediate <i class='bx bx-pen bx-tada' ></i></h3> <br>
+                <p>Children College Azamgarh</p>
+                <p>(ISC BOARD)</p>
+                <i class='bx bx-calendar bx-tada' ></i> 2018-20
+                <p>Secured 75.70% with A Grade</p>
+            </div>
+            <div class="college">
+                <h3>College <i class='bx bxs-school bx-tada'></i></h3> <br>
+                <p>Kanpur Institute Of Technology</p>
+                <p>(AKTU Affiliated)</p>
+                <i class='bx bx-calendar bx-tada' ></i> 2020-24
+                <p>Current CGPA 7.85</p>
+            </div>
         </div>
-        <p>I have done few mesmerizing CSS Projects & also built a Snake Game using HTML , CSS , JS  here : <a href="https://codepen.io/RaoXdev" target="_blank">RaoXdev</a></p>
     </div>
-    <div class="achieve" id="arch">
-        <div class="achv2">
-            <h1 style="color: rgb(11, 94, 146);"> A c h i e v e m e n t s </h1>
+    <div class="skill" id="skill" data-aos="fade-right">
+        <h2>Skills <i class='bx bxs-award'></i></h2>
+        <div class="langs">
+            <div class="react">
+                <h3>React.JS</h3>
+                <i class='bx bxl-react bx-rotate-90' ></i>
+                <p>( 40%)</p>
+            </div>
+            <div class="html">
+                <h3>Html 5</h3>
+                <i class='bx bxl-html5'></i>
+                <p>( 70%)</p>
+            </div>
+            <div class="css">
+                <h3>Css 3</h3>
+                <i class='bx bxl-css3'></i>
+                <p>( 85%)</p>
+            </div>
+            <div class="js">
+                <h3>JavaScript</h3>
+                <i class='bx bxl-javascript'></i>
+                <p>( 65%)</p>
+            </div>
+            <div class="java">
+                <h3>Java</h3>
+                <i class='bx bxl-java'></i>
+                <p>( 65%)</p>
+            </div>
+            <div class="py">
+                <h3>Python</h3>
+                <i class='bx bxl-python'></i>
+                <p>( 70%)</p>
+            </div>
         </div>
-        <ul>
-            <li>Secured 1st Rank in College Coding Competition in 2nd Year</li>
-            <br>
-            <li>Secured Highest Codechef Rating of 1544</li>
-            <br>
-            <li>Always have been under Good Ranks in @Codechef Coding Competitions <a href="https://www.codechef.com/users/rao30">CodeChef Profile</a></li>
-        </ul>
     </div>
+    <div class="proj" id="proj" data-aos="fade-right">
+        <h2>Projects <i class='bx bxs-layer' ></i></h2>
+        <div class="projname">
+            <div class="eclp">
+                <p>Build "Solar Eclipse" transition in Html & Css</p>
+            </div>
+            <div class="snake">
+                <p>Build "Snake Game" in Html , Css & Javascript</p>
+            </div>
+            <div class="trail">
+                <p>Build an Interactive Hover "Trailing" transition in Html & Css</p>
+            </div>
+            <div class="prtcl">
+                <p>Build a Beautiful "Floating Particles" transition in Html & Css</p>
+            </div>
+        </div>
+        <div class="link">
+            <p style="text-align: center;">All the above Projects can be viewed LIVE at this Link <a style="color: rgb(39, 123, 151);" href="https://codepen.io/RaoXdev" target="_blank">RaoXdev</a> (Please Prefer Desktop)</p>
+        </div>
+    </div>
+    <div class="cont" id="cont" data-aos="fade-right">
+        <h2>Contact <i class='bx bx-id-card'></i></h2>
+        <div class="match">
+            <div class="call">
+                <h3>Phone No.</h3>
+                <i class='bx bx-mobile'></i>
+                <p>+91 63862 89481</p>
+            </div>
+            <div class="mail">
+                <h3>GMail</h3>
+                <i class='bx bxl-gmail'></i>
+                <p>raoabhishek353@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <footer data-aos="fade-right">
+        <p>Thank you for visiting my Portfolio Website . Please feel free to contact me to discuss potential collaborations . Don't forget to connect with me on social media to stay updated on my latest projects and news. Thank you again for your interest in my work!</p>
+        <a href="#"><i class='bx bxs-up-arrow-circle' ></i></a>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
+<script src="three.r134.min.js"></script>
+<script src="vanta.globe.min.js"></script>
+<script src="script.js"></script>
 </html>
