@@ -91,6 +91,7 @@ header #ico,header #ico2{
     header ul{
         position: fixed;
         display: block;
+        z-index:5;
         width: 35%;
         top: 80px;
         right: -100%;
