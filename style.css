@@ -193,7 +193,8 @@ header #ico,header #ico2{
     position: absolute;
     z-index: -1;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 5%;
     background-color: white;
